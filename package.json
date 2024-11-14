@@ -7,7 +7,7 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Seu Nome",
+  "author": "Cristian Nascimento",
   "license": "ISC",
   "dependencies": {
     "api-airlytics": "file:",

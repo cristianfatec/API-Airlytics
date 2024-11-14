@@ -1,3 +1,5 @@
+//server.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -5,8 +7,8 @@ const dotenv = require('dotenv'); // Importa dotenv
 
 dotenv.config(); // Carrega as variáveis de ambiente do .env
 
-const readingsRouter = require('./routes/routes'); // Importa as rotas de leituras
-const userRoutes = require('./routes/userRoutes'); // Importa as rotas de usuário
+const readingsRouter = require('./api/readings'); // Importa as rotas de leituras
+const userRoutes = require('./api/users'); // Importa as rotas de usuário
 
 const app = express();
 const mongoDB = process.env.MONGODB_URI; // Carrega a URI do .env
