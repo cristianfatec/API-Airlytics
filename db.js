@@ -1,10 +1,12 @@
+
+//./db.js
 const mongoose = require('mongoose');
 
-let isConnected = false; // Flag para verificar se já está conectado
+let isConnected = false; // Flag para reutilizar a conexão
 
 async function connectToDatabase() {
   if (isConnected) {
-    console.log('Já conectado ao MongoDB!');
+    console.log('Conexão já estabelecida.');
     return;
   }
 
@@ -16,7 +18,7 @@ async function connectToDatabase() {
     isConnected = true;
     console.log('Conexão com o MongoDB estabelecida!');
   } catch (error) {
-    console.error('Erro ao conectar com o MongoDB:', error);
+    console.error('Erro ao conectar ao MongoDB:', error);
     throw error;
   }
 }
