@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "routes": [
+      { "src": "/v1/readings", "dest": "/api/readings" },
+      { "src": "/v1/users/register", "dest": "/api/users" },
+      { "src": "/v1/users/login", "dest": "/api/users" }
+    ]
+  }
+  

@@ -1,6 +1,12 @@
-import { createReading, getAllReadings, getReadingById, updateReading, deleteReading, getMostRecentReading } from '../controllers/controller';
+//./api/readings.js
 
-export default function handler(req, res) {
+import connectToDatabase from '../db';
+import { createReading, getAllReadings, getReadingById, updateReading, deleteReading } from '../controllers/controller';
+
+export default async function handler(req, res) {
+  // Conectando ao banco
+  await connectToDatabase();
+
   if (req.method === 'GET') {
     if (req.query.id) {
       return getReadingById(req, res);

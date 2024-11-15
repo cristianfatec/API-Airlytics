@@ -1,6 +1,12 @@
+//./api/users.js
+
+import connectToDatabase from '../db';
 import { register, login } from '../controllers/userController';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
+  // Conectando ao banco
+  await connectToDatabase();
+
   if (req.method === 'POST') {
     if (req.url === '/register') {
       return register(req, res);
@@ -11,4 +17,3 @@ export default function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
-
