@@ -1,7 +1,7 @@
 //./api/users.js
 
 import connectToDatabase from '../db';
-import { register, login } from '../controllers/userController';
+import { register, login } from '../controller/userController';
 
 export default async function handler(req, res) {
   // Conectando ao banco

@@ -1,7 +1,7 @@
 //./api/readings.js
 
 import connectToDatabase from '../db';
-import { createReading, getAllReadings, getReadingById, updateReading, deleteReading } from '../controllers/controller';
+import { createReading, getAllReadings, getReadingById, updateReading, deleteReading } from '../controller/controller';
 
 export default async function handler(req, res) {
   // Conectando ao banco
