@@ -6,9 +6,9 @@ export default async function handler(req, res) {
   await connectToDatabase();
 
   if (req.method === 'POST') {
-    if (req.url === '/user/register') {
+    if (req.url === '/users/register') {
       return register(req, res);
-    } else if (req.url === '/user/login') {
+    } else if (req.url === '/users/login') {
       return login(req, res);
     } else {
       return res.status(404).json({ message: 'Endpoint não encontrado!' });
