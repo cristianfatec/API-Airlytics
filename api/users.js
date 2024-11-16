@@ -5,8 +5,8 @@ export default async function handler(req, res) {
   // Conectando ao banco
   await connectToDatabase();
 
-  // Determina a subrota (caminho após /api/users)
-  const subRoute = req.url;
+  // Extrair a subrota
+  const subRoute = req.url.split('?')[0]; // Ignora query strings, se existirem.
 
   if (req.method === 'POST') {
     if (subRoute === '/register') {
